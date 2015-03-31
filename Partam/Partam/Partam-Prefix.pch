@@ -1,0 +1,27 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+#define IOS_VERSION [ [ [ UIDevice currentDevice ] systemVersion ] floatValue]
+#define navBarColor [UIColor colorWithRed:193.0/255.0 green:57.0/255.0 blue:43.0/255.0 alpha:1.0]
+#define IOS_OLDER_THAN_6 ( [ [ [ UIDevice currentDevice ] systemVersion ] floatValue ] < 6.0 )
+#define IOS_NEWER_OR_EQUAL_TO_6 ( [ [ [ UIDevice currentDevice ] systemVersion ] floatValue ] >= 6.0 )
+#define bgWebImageColor [UIColor colorWithRed:199.0/255.0 green:201.0/255.0 blue:206.0/255.0 alpha:1.0]
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "AppManager.h"
+    #import "JSON.h"
+    #import "WebServiceManager.h"
+    #import "UIViewController+MMDrawerController.h"
+    #import <Pinterest/Pinterest.h>
+    #import "SDImageCache.h"
+    #import "UIImageView+WebCache.h"
+#endif
